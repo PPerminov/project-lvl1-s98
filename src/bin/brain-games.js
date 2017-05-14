@@ -1,4 +1,8 @@
-#!/usr/bin/node
-let string='Welcome to the Brain Games!'
+#!/usr/bin/env node
+import readlineSync from 'readline-sync';
 
-console.log(string)
+const out = (line) => console.log(line);
+
+out('Welcome to the Brain Games!')
+const commoname = readlineSync.question('May I have your name, please? ');
+out('Welcome sir '+commoname+'!!!!!!1')

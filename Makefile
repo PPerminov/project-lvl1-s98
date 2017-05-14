@@ -7,3 +7,6 @@ start:
 publish:
 	rm -rf dist
 	npm publish
+
+build:
+	npm run build
