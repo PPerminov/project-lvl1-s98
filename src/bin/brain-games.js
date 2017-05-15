@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import * as name from '..';
+import name from '..';
 
-name.greetings();
+name();

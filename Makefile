@@ -10,3 +10,9 @@ publish:
 
 build:
 	npm run build
+
+lint:
+	npm run eslint -- src
+
+test:
+	npm test
