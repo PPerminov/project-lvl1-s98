@@ -14,5 +14,5 @@ build:
 lint:
 	npm run eslint -- src
 
-test:
-	npm test
+# test:
+# 	npm test
