@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import stealth from '..';
+import name from '..';
 
-stealth.greeting();
+name();
