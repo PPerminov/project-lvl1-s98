@@ -8,4 +8,4 @@ export const greetings = () => {
   out(`Hello, ${commoname}!`)
 }
 
-export default greetings
+// export default greetings
