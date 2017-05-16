@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import greetings from '..';
 
-const game = 'base';
+import game from '../games/brain-games';
 
-greetings(game);
+game();

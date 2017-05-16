@@ -1,7 +1,13 @@
 install:
 	npm install
 
-start:
+start1:
+	npm run babel-node -- src/bin/brain-games.js
+
+start2:
+	npm run babel-node -- src/bin/brain-even.js
+
+start3:
 	npm run babel-node -- src/bin/brain-calc.js
 
 publish:

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import EvenOdds from '../logics/EvenOdd';
+import braineven from '../games/brain-even';
 
-EvenOdds(3);
+braineven();
