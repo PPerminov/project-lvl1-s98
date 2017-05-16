@@ -12,7 +12,7 @@ export default (cycles = 3) => {
     num = lib.getRandomInt(1, 50);
     lib.out(`Question: ${num}`);
     answer = lib.input('Your answer: ').toLowerCase();
-    if (lib.checkAnswer(answer) === lib.odd(num)) {
+    if (lib.checkAnswerYes(answer) === lib.odd(num)) {
       lib.out('Correct!\n');
     } else {
       switch (answer) {
