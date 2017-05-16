@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import * as games from '..';
+import greetings from '..';
 
-games.greetings('greetings');
+const game = 'base';
+
+greetings(game);
