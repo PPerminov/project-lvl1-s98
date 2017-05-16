@@ -3,3 +3,5 @@
 [![Issue Count](https://codeclimate.com/github/PPerminov/project-lvl1-s98/badges/issue_count.svg)](https://codeclimate.com/github/PPerminov/project-lvl1-s98)
 
 [![Build Status](https://travis-ci.org/PPerminov/project-lvl1-s98.svg?branch=master)](https://travis-ci.org/PPerminov/project-lvl1-s98)
+
+[![asciicast](https://asciinema.org/a/ak9a1ugx9nl5yoipefalx15uk.png)](https://asciinema.org/a/ak9a1ugx9nl5yoipefalx15uk)
