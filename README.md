@@ -4,4 +4,4 @@
 
 [![Build Status](https://travis-ci.org/PPerminov/project-lvl1-s98.svg?branch=master)](https://travis-ci.org/PPerminov/project-lvl1-s98)
 
-[![asciicast](https://asciinema.org/a/8vvpgmlsr5pgtyqvct9xea2xe.png)](https://asciinema.org/a/8vvpgmlsr5pgtyqvct9xea2xe)
+[![asciicast](https://asciinema.org/a/b01im1hqesx9s2aiw4k6234nw.png)](https://asciinema.org/a/b01im1hqesx9s2aiw4k6234nw)
