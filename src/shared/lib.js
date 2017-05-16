@@ -6,7 +6,7 @@ export const out = (line) => {
 
 export const input = text => readlineSync.question(text);
 
-export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - (min + 1))) + min;
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const odd = num => num % 2 === 0;
 

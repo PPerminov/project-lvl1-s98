@@ -38,7 +38,7 @@ export default (cycles = 3) => {
     level += 1;
     num1 = lib.getRandomInt(1, 50);
     num2 = lib.getRandomInt(1, 50);
-    expr = lib.getRandomInt(1, 3);
+    expr = lib.getRandomInt(1, 4);
     symbol = getSymbol(expr);
     result = getResult(num1, num2, expr);
     lib.out(`Question: ${num1} ${symbol} ${num2}`);
