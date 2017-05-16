@@ -10,7 +10,7 @@ export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - (min
 
 export const odd = num => num % 2 === 0;
 
-export const checkAnswer = (answer) => {
+export const checkAnswerYes = (answer) => {
   if (answer === 'yes') {
     return true;
   } else if (answer === 'no') {

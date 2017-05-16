@@ -10,7 +10,7 @@ export default (game) => {
       lib.out(line2);
       break;
     case 'calc':
-      line2 = 'What is the result of the expression?\n'
+      line2 = 'What is the result of the expression?\n';
       lib.out(line2);
       break;
     default:
