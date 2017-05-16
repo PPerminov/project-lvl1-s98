@@ -15,7 +15,6 @@ export const checkAnswer = (answer) => {
     return true;
   } else if (answer === 'no') {
     return false;
-  } else {
-    return undefined;
   }
+  return undefined;
 };
