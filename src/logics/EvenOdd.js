@@ -3,15 +3,15 @@ import greetings from '..';
 import * as lib from '../shared/lib';
 
 export default (cycles = 3) => {
-  const game = 'evens';
+  const game = 'evenodd';
   const name = greetings(game);
   let level = 1;
+  let num = 0;
+  let answer = '';
   while (level <= cycles) {
-    let num = lib.getRandomInt(1, 50);
+    num = lib.getRandomInt(1, 50);
     lib.out(`Question: ${num}`);
-    let answer = lib.input('').toLowerCase();
-    // lib.out(lib.checkAnswer(answer) === lib.odd(num))
-    // lib.out(answer)
+    answer = lib.input('').toLowerCase();
     if (lib.checkAnswer(answer) === lib.odd(num)) {
       lib.out('Correct!\n');
     } else {
@@ -30,5 +30,5 @@ export default (cycles = 3) => {
     }
     level += 1;
   }
-  lib.out(`Congratulations, ${name}!`)
+  lib.out(`Congratulations, ${name}!`);
 };

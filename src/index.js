@@ -4,7 +4,7 @@ export default (game) => {
   const line1 = 'Welcome to the Brain Games!';
   lib.out(line1);
   switch (game) {
-    case 'evens':
+    case 'evenodd':
       const line2 = 'Answer "yes" if number even otherwise answer "no".\n';
       lib.out(line2);
       break;
