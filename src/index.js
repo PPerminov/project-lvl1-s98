@@ -1,4 +1,4 @@
-import * as lib from './shared/lib';
+import * as lib from './shared/commonfunctions';
 
 export const basegreet = () => {
   lib.out('Welcome to the Brain Games!\n');
@@ -6,19 +6,19 @@ export const basegreet = () => {
   lib.out(`Hello, ${name}!\n`);
 };
 
-export default (greetLine, generator = null) => {
+export default (greetLine, generator) => {
   let level = 0;
-  let dataarray = [];
-  let question = '';
-  let answer = '';
-  let rightanswer = '';
+  let gameData;
+  let question;
+  let answer;
+  let rightanswer;
   lib.out(`Welcome to the Brain Games!\n${greetLine}\n`);
   const name = lib.input('May I have your name? ');
   lib.out(`Hello, ${name}!\n`);
   while (level < 3) {
-    dataarray = generator();
-    question = dataarray[0];
-    rightanswer = dataarray[666];
+    gameData = generator();
+    question = lib.car(gameData);
+    rightanswer = lib.cdr(gameData);
     lib.out(`Question: ${question}`);
     answer = lib.input('Your answer: ').toLowerCase();
     if (answer === rightanswer) {
