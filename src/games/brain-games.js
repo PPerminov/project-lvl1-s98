@@ -1,5 +1,5 @@
 import main from '../';
 
 export default () => {
-main();
+  main();
 };

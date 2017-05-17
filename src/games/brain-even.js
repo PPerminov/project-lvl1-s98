@@ -3,6 +3,7 @@ import main from '../';
 import * as lib from '../shared/lib';
 
 export default () => {
+  const greetLine = 'Answer "yes" if number even otherwise answer "no".';
   const generator = () => {
     const result = [];
     result[0] = lib.getRandomInt(1, 50);
@@ -13,5 +14,5 @@ export default () => {
     }
     return result;
   };
-  main(generator);
+  main(greetLine, generator);
 };
