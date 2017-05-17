@@ -21,3 +21,10 @@ export const pair = (car, cdr) => {
 export const car = paired => paired('car');
 
 export const cdr = paired => paired('cdr');
+
+export const gcd = (number1, number2) => {
+  if (number2 === 0) {
+    return number1;
+  }
+  return gcd(number2, number1 % number2);
+};

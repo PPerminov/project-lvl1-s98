@@ -1,4 +1,4 @@
-import * as brain from './shared/brainfunctions';
+import * as brain from './shared/brain-games-common';
 
 export const basegreet = () => {
   brain.out('Welcome to the Brain Games!\n');
@@ -8,23 +8,17 @@ export const basegreet = () => {
 
 export default (greetLine, generator) => {
   let level = 0;
-  let gameData;
-  let question;
-  let answer;
-  let rightanswer;
   brain.out(`Welcome to the Brain Games!\n${greetLine}\n`);
   const name = brain.input('May I have your name? ');
   brain.out(`Hello, ${name}!\n`);
   while (level < 3) {
-    gameData = generator();
-    question = brain.car(gameData);
-    rightanswer = brain.cdr(gameData);
-    brain.out(`Question: ${question}`);
-    answer = brain.input('Your answer: ').toLowerCase();
-    if (answer === rightanswer) {
+    const gameData = generator();
+    brain.out(`Question: ${brain.car(gameData)}`);
+    const answer = brain.input('Your answer: ').toLowerCase();
+    if (answer === brain.cdr(gameData)) {
       brain.out('Correct!');
     } else {
-      brain.out(`'${answer}' is wrong answer ;(. Correct answer was '${rightanswer}'\nLet's try again, ${name}!`);
+      brain.out(`'${answer}' is wrong answer ;(. Correct answer was '${brain.cdr(gameData)}'\nLet's try again, ${name}!`);
       return;
     }
     level += 1;

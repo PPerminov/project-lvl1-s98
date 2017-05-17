@@ -1,15 +1,15 @@
-import main from '../';
+import startGame from '../';
 
-import * as brain from '../shared/brainfunctions';
+import * as brain from '../shared/brain-games-common';
 
 export default () => {
   const greetLine = 'Answer "yes" if number even otherwise answer "no".';
   const generator = () => {
-    const FunctionResult = brain.getRandomInt(1, 50);
-    if (FunctionResult % 2 === 0) {
-      return brain.pair(FunctionResult, 'yes');
+    const number = brain.getRandomInt(1, 50);
+    if (number % 2 === 0) {
+      return brain.pair(number, 'yes');
     }
-    return brain.pair(FunctionResult, 'no');
+    return brain.pair(number, 'no');
   };
-  main(greetLine, generator);
+  startGame(greetLine, generator);
 };

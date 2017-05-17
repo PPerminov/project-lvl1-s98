@@ -1,5 +1,5 @@
-import main from '../';
+import startGame from '../';
 
 export default () => {
-  main();
+  startGame();
 };
