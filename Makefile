@@ -13,6 +13,9 @@ start3:
 start4:
 	npm run babel-node -- src/bin/brain-gcd.js
 
+start5:
+	npm run babel-node -- src/bin/brain-balance.js
+
 publish:
 	rm -rf dist
 	npm publish
