@@ -41,3 +41,17 @@ export const getMeanAndLengthFromNumber = (number) => {
 
   return Mean(String(number));
 };
+
+export const isSimple = (numberToCheck) => {
+  if (numberToCheck % 2 === 0) {
+    return false;
+  } else if (numberToCheck === 1 || numberToCheck === 3) {
+    return true;
+  }
+  for (let i = 3; i <= numberToCheck / 3; i += 2) {
+    if (numberToCheck % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
