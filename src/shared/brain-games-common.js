@@ -41,7 +41,7 @@ export const getMeanAndLengthFromNumber = (number) => {
   return Mean(String(number));
 };
 
-export const isPrime = (numberToCheck, divisor = 3) => {
+export const isPrime = (numberToCheck, divisor = 2) => {
   if (numberToCheck / 3 <= divisor) {
     return true;
   }
