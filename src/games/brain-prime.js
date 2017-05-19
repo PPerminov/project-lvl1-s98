@@ -6,7 +6,7 @@ export default () => {
   const greetLine = 'Is number is prime?????? true or false';
   const generator = () => {
     const number = brain.getRandomInt(100, 1000);
-    return brain.pair(number, String(brain.isSimple(number)));
+    return brain.pair(number, String(brain.isPrime(number)));
   };
   startGame(greetLine, generator);
 };

@@ -7,23 +7,15 @@ export default () => {
   const generator = () => {
     const mutator = brain.getRandomInt(11, 100);
     const progressionArray = [brain.getRandomInt(11, 100)];
+    const progressionLength = 10;
     const positionToFind = brain.getRandomInt(0, 10);
-    let progressionString = '';
-    while (progressionArray.length < 10) {
+    while (progressionArray.length < progressionLength) {
       progressionArray[progressionArray.length] =
         progressionArray[progressionArray.length - 1] + mutator;
     }
     const rightAnswer = progressionArray[positionToFind];
     progressionArray[positionToFind] = '..';
-    for (let i = 0; i < 10; i += 1) {
-      if (i === 0) {
-        progressionString = `${progressionArray[i]}`;
-      } else {
-        progressionString = `${progressionString} ${progressionArray[i]}`;
-      }
-    }
-
-    return brain.pair(`${progressionString} Answer: ${rightAnswer}`, `${rightAnswer}`);
+    return brain.pair(`${progressionArray.join(' ')} Answer: ${rightAnswer}`, `${rightAnswer}`);
   };
   startGame(greetLine, generator);
 };

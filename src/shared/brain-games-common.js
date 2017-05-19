@@ -35,23 +35,18 @@ export const getMeanAndLengthFromNumber = (number) => {
       const resultPair = pair(accum / unit, unit);
       return resultPair;
     }
-    // const next = unit + 1;
     return Mean(numberForMean, unit + 1, accum + Number(numberForMean[unit]));
   };
 
   return Mean(String(number));
 };
 
-export const isSimple = (numberToCheck) => {
-  if (numberToCheck % 2 === 0) {
-    return false;
-  } else if (numberToCheck === 1 || numberToCheck === 3) {
+export const isPrime = (numberToCheck, divisor = 3) => {
+  if (numberToCheck / 3 <= divisor) {
     return true;
   }
-  for (let i = 3; i <= numberToCheck / 3; i += 2) {
-    if (numberToCheck % i === 0) {
-      return false;
-    }
+  if (numberToCheck % divisor === 0) {
+    return false;
   }
-  return true;
+  return isPrime(numberToCheck, (divisor + 1));
 };
