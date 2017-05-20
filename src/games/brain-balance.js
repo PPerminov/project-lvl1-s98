@@ -6,22 +6,19 @@ export default () => {
   const greetLine = 'Balance the given number.';
   const generator = () => {
     const number = brain.getRandomInt(100, 10000);
-    const meanPair = brain.getMeanAndLengthFromNumber(number);
-    const mean = brain.car(meanPair);
-    const numberLength = brain.cdr(meanPair);
-    const difference = (mean - Math.floor(mean)) * numberLength;
-    const buildBalancedNumber = (arithmeticMean, value, additional, balancedNumber = '') => {
-      if (value === 0) {
-        return balancedNumber;
+    const balancer = (numbers) => {
+      const newArray = numbers.sort();
+      const min = newArray[0] * 1;
+      const max = newArray[newArray.length - 1] * 1;
+      if (max - min > 1) {
+        const arithmeticMean = (min + max) / 2;
+        newArray[0] = Math.floor(arithmeticMean);
+        newArray[newArray.length - 1] = Math.ceil(arithmeticMean);
+        return balancer(newArray);
       }
-      if (additional > 0) {
-        return buildBalancedNumber(arithmeticMean, value - 1,
-          additional - 1, String(arithmeticMean + 1) + balancedNumber);
-      }
-      return buildBalancedNumber(arithmeticMean, value - 1,
-        additional, String(arithmeticMean) + balancedNumber);
+      return newArray.join('');
     };
-    const balancedNumber = buildBalancedNumber(Math.floor(mean), numberLength, difference);
+    const balancedNumber = balancer((`${number}`).split(''));
     return brain.pair(`${number}        Answer is: ${balancedNumber}`, balancedNumber);
   };
   startGame(greetLine, generator);

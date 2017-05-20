@@ -29,18 +29,6 @@ export const gcd = (number1, number2) => {
   return gcd(number2, number1 % number2);
 };
 
-export const getMeanAndLengthFromNumber = (number) => {
-  const Mean = (numberForMean, unit = 0, accum = 0) => {
-    if (typeof numberForMean[unit] === 'undefined') {
-      const resultPair = pair(accum / unit, unit);
-      return resultPair;
-    }
-    return Mean(numberForMean, unit + 1, accum + Number(numberForMean[unit]));
-  };
-
-  return Mean(String(number));
-};
-
 export const isPrime = (numberToCheck, divisor = 2) => {
   if (numberToCheck / 3 <= divisor) {
     return true;
