@@ -38,3 +38,7 @@ export const isPrime = (numberToCheck, divisor = 2) => {
   }
   return isPrime(numberToCheck, (divisor + 1));
 };
+
+export const toInt = string => Number(string);
+
+export const numberToArray = number => (String(number)).split('').map(toInt);
