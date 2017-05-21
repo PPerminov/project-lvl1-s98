@@ -19,7 +19,7 @@ export default () => {
       return newArray.join('');
     };
     const balancedNumber = balancer(brain.numberToArray(number));
-    return brain.pair(`${number}        Answer is: ${balancedNumber}`, balancedNumber);
+    return brain.pair(`${number}`, balancedNumber);
   };
   startGame(greetLine, generator);
 };
